@@ -16,7 +16,7 @@ public class PeakVolumeFilter extends AudioFilter {
         double value, total = 0;
 
         for ( int i = 0; i < buffer.length; i++ ) {
-            total += buffer[i];
+            total += buffer[ i ];
         }
 
         value = -0.691 + 10 * Math.log10( total / buffer.length );

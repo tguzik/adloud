@@ -1,8 +1,8 @@
 package com.tguzik.apsc.gui;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.SystemColor;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.NumberFormat;
@@ -10,27 +10,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFormattedTextField;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.ListSelectionModel;
-import javax.swing.ScrollPaneConstants;
-import javax.swing.SwingConstants;
-import javax.swing.border.EmptyBorder;
-
 import com.tguzik.apsc.StatusIntermediary;
 import com.tguzik.util.annotations.Shutdownable;
 
 /**
  * Here be dragons...
- * 
+ * <p/>
  * ...but seriously, creating GUIs in any language sucks.
  */
 public class StatusDisplay extends JFrame implements Shutdownable {

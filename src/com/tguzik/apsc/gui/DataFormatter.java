@@ -1,9 +1,8 @@
 package com.tguzik.apsc.gui;
 
+import com.tguzik.apsc.alerts.Alert;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-
-import com.tguzik.apsc.alerts.Alert;
 
 public class DataFormatter {
     private static DateTimeFormatter FORMATTER = DateTimeFormat.forPattern( "YYYY-MM-dd HH:ss" );
@@ -20,7 +19,7 @@ public class DataFormatter {
         if ( value > 70 ) {
             return 100;
         }
-        return (int) ( value / 0.70 );
+        return (int) (value / 0.70);
     }
 
     public static String formatLong( long value ) {

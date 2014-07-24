@@ -6,7 +6,7 @@ public class AlertsTableModel extends DefaultTableModel {
     private static final long serialVersionUID = 1L;
 
     public AlertsTableModel() {
-        super( new Object[][] {}, new String[] { "Date and time", "Peak value" } );
+        super( new Object[][] { }, new String[] { "Date and time", "Peak value" } );
     }
 
     public Class<?> getColumnClass( int columnIndex ) {

@@ -1,11 +1,8 @@
 package com.tguzik.apsc.gui;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
 import java.util.LinkedList;
-
-import javax.swing.JPanel;
 
 import com.tguzik.apsc.StatusIntermediary;
 import com.tguzik.util.Pair;
@@ -34,11 +31,11 @@ public class VolumeGraphComponent extends JPanel {
 
             // Draw the value that is equal to average from last 20 seconds
             g.setColor( Color.GRAY );
-            g.drawRect( d.width - ( i + 1 ), d.height - pair.getFirst(), 0, 0 );
+            g.drawRect( d.width - (i + 1), d.height - pair.getFirst(), 0, 0 );
 
             // Draw current value
             g.setColor( Color.GREEN );
-            g.drawRect( d.width - ( i + 1 ), d.height - pair.getSecond(), 0, 0 );
+            g.drawRect( d.width - (i + 1), d.height - pair.getSecond(), 0, 0 );
         }
     }
 
@@ -70,6 +67,6 @@ public class VolumeGraphComponent extends JPanel {
         int value = DataFormatter.prepareIntegerPeakValue( in );
         Dimension d = this.getSize();
 
-        return (int) ( ( (double) value / 100.0 ) * d.height );
+        return (int) (((double) value / 100.0) * d.height);
     }
 }

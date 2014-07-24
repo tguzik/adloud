@@ -10,7 +10,10 @@ public class RetrospectFilter extends AudioFilter {
 
     private final int bufferBaseSize;
 
-    public RetrospectFilter( AudioFilter nextInChain, AudioFormat format, int inputAudioBufferSizeSamples, int multipler ) {
+    public RetrospectFilter( AudioFilter nextInChain,
+                             AudioFormat format,
+                             int inputAudioBufferSizeSamples,
+                             int multipler ) {
         super( nextInChain );
         this.bufferBaseSize = inputAudioBufferSizeSamples;
         this.temporary = createBuffer( this.bufferBaseSize, multipler - 1 );
@@ -18,7 +21,7 @@ public class RetrospectFilter extends AudioFilter {
     }
 
     private double[] createBuffer( int size, int multipler ) {
-        return new double[size * multipler];
+        return new double[ size * multipler ];
     }
 
     @Override

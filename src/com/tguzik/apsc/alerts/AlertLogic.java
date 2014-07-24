@@ -38,11 +38,11 @@ public class AlertLogic {
     }
 
     private boolean isOutsideTimeWindow( long now, long item, long windowSize ) {
-        return ( now - item ) > windowSize;
+        return (now - item) > windowSize;
     }
 
     private boolean isAboveThreshold( double avg, double value ) {
-        return ( value - avg ) > intermediary.getThreshold();
+        return (value - avg) > intermediary.getThreshold();
     }
 
     private double calculateAverage() {

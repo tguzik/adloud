@@ -1,7 +1,6 @@
 package com.tguzik.apsc.gui;
 
-import javax.swing.JProgressBar;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 import com.tguzik.apsc.StatusIntermediary;
 import com.tguzik.apsc.alerts.Alert;
@@ -36,7 +35,8 @@ public class ValueUpdateTask implements Runnable {
     public void run() {
         currentPeakValueField.setText( DataFormatter.formatPeakValue( statusIntermediary.getCurrentPeakValue() ) );
         timeWindowAverageField.setText( DataFormatter.formatPeakValue( statusIntermediary.getTimeWindowAvereage() ) );
-        currentPeakValueProgressBar.setValue( DataFormatter.prepareIntegerPeakValue( statusIntermediary.getCurrentPeakValue() ) );
+        currentPeakValueProgressBar.setValue( DataFormatter.prepareIntegerPeakValue( statusIntermediary
+                                                                                             .getCurrentPeakValue() ) );
 
         refreshCounter++;
         if ( refreshCounter == 10 ) {

@@ -1,14 +1,12 @@
 package com.tguzik.apsc.gui;
 
+import javax.swing.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import javax.swing.JFormattedTextField;
-
+import com.tguzik.apsc.StatusIntermediary;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.tguzik.apsc.StatusIntermediary;
 
 class CustomThresholdChangeListener implements PropertyChangeListener {
     private static final Logger LOGGER = LoggerFactory.getLogger( CustomThresholdChangeListener.class );
@@ -22,7 +20,7 @@ class CustomThresholdChangeListener implements PropertyChangeListener {
 
     @Override
     public void propertyChange( PropertyChangeEvent evt ) {
-        double v = ( (Number) field.getValue() ).doubleValue();
+        double v = ((Number) field.getValue()).doubleValue();
         si.setThreshold( v );
 
         LOGGER.info( String.format( "Setting threshold at %d LKFS", v ) );

@@ -24,19 +24,19 @@ public class FrequencyFilter extends AudioFilter {
         for ( int i = 0; i < buffer.length; i++ ) {
             double in, out;
 
-            in = buffer[i];
+            in = buffer[ i ];
 
             // Sigma - first step
-            xv0 = in - ( xv1 * a[1] ) - ( xv2 * a[2] );
+            xv0 = in - (xv1 * a[ 1 ]) - (xv2 * a[ 2 ]);
 
             // Calculate both coefficients
             xv1 = xv0 / 10;
             xv2 = xv1 / 10;
 
             // Final calculations
-            out = ( b[0] * xv0 ) + ( b[1] * xv1 ) + ( b[2] * xv2 );
+            out = (b[ 0 ] * xv0) + (b[ 1 ] * xv1) + (b[ 2 ] * xv2);
 
-            buffer[i] = out;
+            buffer[ i ] = out;
         }
         return buffer;
     }

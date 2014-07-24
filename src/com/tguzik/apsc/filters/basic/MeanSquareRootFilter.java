@@ -19,14 +19,14 @@ public class MeanSquareRootFilter extends AudioFilter {
 
         // Odczyt
         for ( int i = 0; i < input.length; i++ ) {
-            value += input[i] * input[i];
+            value += input[ i ] * input[ i ];
         }
 
         value = Math.sqrt( value / input.length );
 
         // Zapis
         for ( int i = 0; i < input.length; i++ ) {
-            input[i] = value;
+            input[ i ] = value;
         }
 
         return input;

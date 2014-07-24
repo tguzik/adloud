@@ -1,18 +1,17 @@
 package com.tguzik.apsc;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.tguzik.apsc.gui.StatusDisplay;
 import com.tguzik.apsc.processor.AudioProcessor;
 import com.tguzik.util.annotations.Shutdownable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Luzne notki:
  * - Dziennik ustaw z algorytmem jest do rzyci. Znacznie czytelniejsze jest zalecenie
  * ITU: @see http://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1770-3-201208-I!!PDF-E.pdf
  * - Sygnal wejsciowy MUSI byc samplowany na 48000 Hz
- * 
+ *
  * @author Tomek
  */
 public class Reklama implements Shutdownable {
